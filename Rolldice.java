@@ -37,7 +37,69 @@ public class Rolldice {
             System.out.println("Secound roll was " + secoundValue);
             System.out.println("So far you have rolled " + rollcount + "times");
         
-            rollcount++;
+            rollcount++;import java.util.Random;
+
+public class RollDice {
+
+    public static void main(String[] args) {
+
+        class Die {
+
+            private int faceValue;
+
+            public void roll() {
+
+                faceValue = (int) (Math.random() * 6 + 1);
+
+                System.out.println("The value is " + faceValue);
+
+            }
+
+            public int getFaceValue() {
+
+                return faceValue;
+
+            }
+
+        }
+
+        Die firstRoll = new Die();
+
+        Die secondRoll = new Die();
+
+        int rollCount = 0;
+
+        while (true) {
+
+            firstRoll.roll();
+
+            secondRoll.roll();
+
+            int firstValue = firstRoll.getFaceValue();
+
+            int secondValue = secondRoll.getFaceValue();
+
+            System.out.println("First roll was " + firstValue);
+
+            System.out.println("Second roll was " + secondValue);
+
+            System.out.println("So far you have rolled " + rollCount + " times");
+
+            rollCount++;
+
+            if (firstValue == secondValue) {
+
+                System.out.println("The rolls are the same and it only took " + rollCount + " times");
+
+                break;
+
+            }
+
+        }
+
+    }
+
+}
         }
     if (firstValue == secoundValue) {
         System.out.println("The rolls are the same and it only took" + rollcount + "times" );
